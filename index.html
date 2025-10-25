@@ -180,7 +180,6 @@ footer{
   <nav>
     <a href="/index.html" class="nav-btn">Home</a>
     <a href="/Projects.html" class="nav-btn">Projects</a>
-    <a href="/impressum.html" class="nav-btn">Impressum</a>
   </nav>
 </header>
 
@@ -189,17 +188,31 @@ footer{
 <div class="content">
   <div class="box">
     <h2>About Me</h2>
-    <p>Write your introduction here — who you are, what nova’s digital den is about, or your creative mission.</p>
+    <p>Hewwwoo im nova and i love developing stuff in my free time some mpre stuff abt me :3</p>
+    <p>Projects im working on right now are heavensmp.net and my own minecraft client but thats on hold rn cuz of the recent updates to minecraft.</p>
+    <p>I love making prvt mc server for people. i have the resourcse rn to host for some more people</p>
+    <p>OwO UwU qwq :3 :D :P</p>
+    <p> </p>
   </div>
 
   <div class="box">
-    <h2>Current Projects</h2>
-    <p>Add details about what you’re working on, your latest creations, or ideas you’re developing.</p>
+    <h2>Projects im working on</h2>
+    <p>1. heavenmp.net </p>    
+    <p> heavensmp is a minecraft smp and network where i am one of the 2 lead developers
+      ^
+    </p>
+    <p> </p>
   </div>
 
   <div class="box">
     <h2>Contact</h2>
-    <p>Your socials or contact info.</p>
+    <p>discord: xe_nova</p>
+    <p>minecraft: nova_on_vrc</p>
+    <p>telegram: @xe_nova</p>
+    <p>mail: nova@xe-nova.eu</p>
+    <p></p>
+    <p></p>
+    <p></p>
   </div>
 
   <div class="box">
@@ -296,7 +309,7 @@ audio.addEventListener('ended', ()=>{
 
 playBtn.addEventListener('click', ()=>{ if (audio.paused) audio.play(); else audio.pause(); });
 
-// Seek (pointer: click + drag)
+
 let seeking = false;
 function pctFromEvent(e){
   const rect = bar.getBoundingClientRect();
@@ -316,17 +329,17 @@ bar.addEventListener('pointermove', (e)=>{ if (seeking) seekTo(e); });
 bar.addEventListener('pointerup',   ()=>{ seeking = false; });
 bar.addEventListener('pointercancel',()=>{ seeking = false; });
 
-// Volume
+// volume
 vol.addEventListener('input', ()=>{ audio.volume = Number(vol.value); });
 
-// Loop toggle
+// loop toggle
 loopBtn.addEventListener('click', ()=>{
   audio.loop = !audio.loop;
   loopBtn.style.boxShadow = audio.loop ? '0 0 18px var(--neon-side)' : '';
   loopBtn.style.borderColor = audio.loop ? 'var(--neon-side)' : 'rgba(255,255,255,.25)';
 });
 
-// Init UI
+// ui
 eq.style.animationPlayState = 'paused';
 cur.textContent = '0:00';
 dur.textContent = '0:00';
