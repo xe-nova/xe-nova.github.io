@@ -17,32 +17,34 @@ nav{display:flex;gap:12px}
 .nav-btn{text-decoration:none;color:#fff;padding:8px 16px;border:1px solid rgba(255,255,255,.3);border-radius:8px;background:rgba(255,255,255,.05);transition:all .3s ease}
 .nav-btn:hover{background:var(--neon-main);box-shadow:0 0 20px var(--neon-main);border-color:var(--neon-side)}
 
+.hero{text-align:center;margin:60px auto 40px;max-width:900px;padding:0 20px;opacity:0;animation:fadeIn 1.8s ease forwards}
+.hero h1{font-size:2.2rem;margin:0;text-shadow:0 0 25px var(--neon-main),0 0 15px var(--neon-side);font-weight:800}
+.hero p{font-size:1.1rem;opacity:.9;margin-top:8px;text-shadow:0 0 12px var(--neon-side)}
+@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+
 .content{max-width:1000px;margin:0 auto;padding:0 20px 80px;display:flex;flex-direction:column;gap:40px}
 .box{background:var(--glass-bg);border:1px solid rgba(255,255,255,.2);border-radius:12px;padding:30px;box-shadow:0 0 20px rgba(185,76,255,.25);backdrop-filter:blur(6px);transition:transform .3s ease,box-shadow .3s ease}
 .box:hover{transform:translateY(-5px);box-shadow:0 0 35px var(--neon-main),0 0 15px var(--neon-side)}
 h2{margin:0 0 10px;text-shadow:0 0 15px var(--neon-side),0 0 10px var(--neon-main)}
 
-.banner{width:100%;border-radius:16px;display:block;box-shadow:0 0 24px rgba(185,76,255,.45),0 0 14px rgba(0,255,157,.35)}
+footer{text-align:center;padding:30px 0 20px;background:rgba(25,0,40,.8);border-top:1px solid rgba(255,255,255,.15);backdrop-filter:blur(8px);box-shadow:0 -2px 20px rgba(0,0,0,.6)}
 
-.player{display:grid;grid-template-columns:64px 56px 1fr;grid-template-rows:auto auto;gap:14px;align-items:center;background:linear-gradient(180deg,rgba(40,0,70,.55),rgba(25,0,50,.45));border:1px solid rgba(255,255,255,.18);border-radius:14px;padding:16px;box-shadow:0 0 24px rgba(185,76,255,.28);position:relative}
-.art{grid-row:1 / span 2;inline-size:64px;block-size:64px;border-radius:12px;background:
-  radial-gradient(100% 100% at 30% 30%,rgba(185,76,255,.9),transparent 60%),
-  radial-gradient(100% 100% at 70% 70%,rgba(0,255,157,.7),transparent 60%),
-  linear-gradient(135deg,#2c0050,#140028);box-shadow:0 0 20px rgba(185,76,255,.35),0 0 14px rgba(0,255,157,.25)}
+.player{display:grid;grid-template-columns:64px 56px 1fr;grid-template-rows:auto auto;gap:14px;align-items:center;border:1px solid rgba(255,255,255,.18);border-radius:14px;padding:16px;position:relative;overflow:hidden;box-shadow:0 0 24px rgba(185,76,255,.28)}
+.player::before{content:"";position:absolute;inset:0;background:url("banner.png") center/cover no-repeat;filter:brightness(0.7) blur(3px);z-index:-1;opacity:.9}
+.art{grid-row:1 / span 2;inline-size:64px;block-size:64px;border-radius:12px;background:radial-gradient(100% 100% at 30% 30%,rgba(185,76,255,.9),transparent 60%),radial-gradient(100% 100% at 70% 70%,rgba(0,255,157,.7),transparent 60%),linear-gradient(135deg,#2c0050,#140028);box-shadow:0 0 20px rgba(185,76,255,.35),0 0 14px rgba(0,255,157,.25)}
 .controls{display:grid;grid-auto-rows:44px;gap:10px}
-.btn{inline-size:44px;block-size:44px;border-radius:10px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.06);color:#fff;cursor:pointer;display:grid;place-items:center;box-shadow:0 0 16px rgba(185,76,255,.25);transition:transform .15s ease,box-shadow .25s ease,background .25s ease,border-color .25s ease}
+.btn{inline-size:44px;block-size:44px;border-radius:10px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:#fff;cursor:pointer;display:grid;place-items:center;box-shadow:0 0 16px rgba(185,76,255,.25);transition:transform .15s ease,box-shadow .25s ease,background .25s ease,border-color .25s ease}
 .btn:hover{transform:translateY(-1px);box-shadow:0 0 24px rgba(185,76,255,.6);background:rgba(185,76,255,.15);border-color:var(--neon-side)}
 .play::before{content:"";width:0;height:0;border-left:14px solid #fff;border-top:9px solid transparent;border-bottom:9px solid transparent;transform:translateX(1px)}
 .play.paused::before{content:"";width:14px;height:14px;background:transparent;border:none;box-shadow:inset 4px 0 0 0 #fff,inset -4px 0 0 0 #fff}
 .loop{font-weight:700}
 
 .track{display:grid;gap:10px}
-.bar{width:100%;height:6px;border-radius:999px;background:rgba(255,255,255,.12);position:relative;cursor:pointer;box-shadow:inset 0 0 10px rgba(0,0,0,.4);touch-action:none}
+.bar{width:100%;height:6px;border-radius:999px;background:rgba(255,255,255,.2);position:relative;cursor:pointer;box-shadow:inset 0 0 10px rgba(0,0,0,.4);touch-action:none}
 .fill{position:absolute;left:0;top:0;height:100%;width:0%;background:linear-gradient(90deg,var(--neon-main),var(--neon-side));box-shadow:0 0 16px var(--neon-main);border-radius:999px}
-.knob{position:absolute;top:50%;transform:translate(0,-50%);width:12px;height:12px;border-radius:50%;background:var(--neon-side);right:-6px;box-shadow:0 0 12px var(--neon-side)}
 .time{display:flex;justify-content:space-between;gap:16px;font-size:.9rem;opacity:.9;font-variant-numeric:tabular-nums}
 .right{display:flex;align-items:center;gap:12px}
-.vol-range{appearance:none;width:130px;height:6px;border-radius:999px;background:rgba(255,255,255,.15);outline:none}
+.vol-range{appearance:none;width:130px;height:6px;border-radius:999px;background:rgba(255,255,255,.2);outline:none}
 .vol-range::-webkit-slider-thumb{appearance:none;width:14px;height:14px;border-radius:50%;background:var(--neon-side);box-shadow:0 0 12px var(--neon-side)}
 .vol-range::-moz-range-thumb{width:14px;height:14px;border-radius:50%;background:var(--neon-side);border:0;box-shadow:0 0 12px var(--neon-side)}
 .eq{display:flex;gap:4px;opacity:.85}
@@ -50,7 +52,6 @@ h2{margin:0 0 10px;text-shadow:0 0 15px var(--neon-side),0 0 10px var(--neon-mai
 .eq span:nth-child(2){animation-delay:.15s}.eq span:nth-child(3){animation-delay:.3s}.eq span:nth-child(4){animation-delay:.45s}
 @keyframes eq{0%,100%{transform:scaleY(.4)}50%{transform:scaleY(1)}}
 
-.player.playing{box-shadow:0 0 32px rgba(185,76,255,.6),0 0 22px rgba(0,255,157,.35)}
 .player.playing .art{animation:ring 2.4s ease-in-out infinite}
 @keyframes ring{0%{box-shadow:0 0 20px rgba(185,76,255,.35),0 0 14px rgba(0,255,157,.25)}50%{box-shadow:0 0 36px rgba(185,76,255,.9),0 0 26px rgba(0,255,157,.6)}100%{box-shadow:0 0 20px rgba(185,76,255,.35),0 0 14px rgba(0,255,157,.25)}}
 
@@ -68,6 +69,11 @@ h2{margin:0 0 10px;text-shadow:0 0 15px var(--neon-side),0 0 10px var(--neon-mai
     <a href="/Projects.html" class="nav-btn">Projects</a>
   </nav>
 </header>
+
+<section class="hero">
+  <h1>where caffeine meets code.</h1>
+  <p>half logic, half chaos — built at 2 a.m. with too much coffee and way too many ideas.</p>
+</section>
 
 <div class="content">
   <div class="box">
@@ -96,21 +102,19 @@ h2{margin:0 0 10px;text-shadow:0 0 15px var(--neon-side),0 0 10px var(--neon-mai
   </div>
 
   <div class="box">
-    <img src="banner.png" alt="Song banner" class="banner">
+    <h2>my fav song rn from blacklite discrict</h2>
     <div class="player" id="player">
-      <div class="art" aria-hidden="true"></div>
+      <div class="art"></div>
       <div class="controls">
-        <button class="btn play" id="play" aria-label="Play/Pause"></button>
+        <button class="btn play" id="play"></button>
         <button class="btn loop" id="loop" aria-pressed="false">∞</button>
       </div>
       <div class="track">
-        <div class="bar" id="bar" role="slider" aria-valuemin="0" aria-valuemax="100" tabindex="0">
-          <div class="fill" id="fill"><span class="knob"></span></div>
-        </div>
+        <div class="bar" id="bar"><div class="fill" id="fill"></div></div>
         <div class="time">
           <span class="cur" id="cur">0:00</span>
           <div class="right">
-            <input type="range" class="vol-range" id="vol" min="0" max="1" step="0.01" value="0.8" aria-label="Volume">
+            <input type="range" class="vol-range" id="vol" min="0" max="1" step="0.01" value="0.8">
             <div class="eq" id="eq"><span></span><span></span><span></span><span></span></div>
             <span class="dur" id="dur">0:00</span>
           </div>
@@ -118,7 +122,6 @@ h2{margin:0 0 10px;text-shadow:0 0 15px var(--neon-side),0 0 10px var(--neon-mai
       </div>
       <audio id="mp3" src="song.mp3" preload="metadata"></audio>
     </div>
-    <p>my fav song rn from blacklite discrict</p>
   </div>
 
   <div class="box">
@@ -140,21 +143,19 @@ h2{margin:0 0 10px;text-shadow:0 0 15px var(--neon-side),0 0 10px var(--neon-mai
 
 <script defer>
 const audio=document.getElementById("mp3"),playBtn=document.getElementById("play"),loopBtn=document.getElementById("loop"),bar=document.getElementById("bar"),fill=document.getElementById("fill"),cur=document.getElementById("cur"),dur=document.getElementById("dur"),player=document.getElementById("player"),eq=document.getElementById("eq"),vol=document.getElementById("vol");
-function fmt(e){if(!Number.isFinite(e)||e<0)return"0:00";const t=Math.floor(e/3600),n=Math.floor(e%3600/60),a=Math.floor(e%60);return t?`${t}:${String(n).padStart(2,"0")}:${String(a).padStart(2,"0")}`:`${n}:${String(a).padStart(2,"0")}`}
+function fmt(e){if(!Number.isFinite(e)||e<0)return"0:00";const t=Math.floor(e/60),n=Math.floor(e%60);return`${t}:${String(n).padStart(2,"0")}`}
 function safeDur(){const e=audio.duration;return Number.isFinite(e)&&e>0?e:0}
 function updateDur(){const e=safeDur();dur.textContent=fmt(e),0===e&&audio.readyState<2&&setTimeout(updateDur,300)}
-function updateUI(){const e=safeDur(),t=Number.isFinite(audio.currentTime)?audio.currentTime:0;cur.textContent=fmt(t);const n=e?t/e*100:0;fill.style.width=Math.max(0,Math.min(100,n))+"%";bar.setAttribute("aria-valuenow",Math.round(n))}
+function updateUI(){const e=safeDur(),t=audio.currentTime||0;cur.textContent=fmt(t);const n=e?t/e*100:0;fill.style.width=Math.max(0,Math.min(100,n))+"%"}
 let rafId=null;function tick(){updateUI(),rafId=requestAnimationFrame(tick)}function startRaf(){null===rafId&&(rafId=requestAnimationFrame(tick))}function stopRaf(){null!==rafId&&(cancelAnimationFrame(rafId),rafId=null)}
-audio.addEventListener("loadedmetadata",updateDur);audio.addEventListener("durationchange",updateDur);audio.addEventListener("canplay",updateDur);audio.addEventListener("progress",updateDur);
-audio.addEventListener("play",()=>{player.classList.add("playing"),eq.style.animationPlayState="running",playBtn.classList.add("paused"),startRaf()});
-audio.addEventListener("pause",()=>{player.classList.remove("playing"),eq.style.animationPlayState="paused",playBtn.classList.remove("paused"),stopRaf()});
+audio.addEventListener("loadedmetadata",updateDur);audio.addEventListener("durationchange",updateDur);audio.addEventListener("canplay",updateDur);
+audio.addEventListener("play",()=>{player.classList.add("playing"),playBtn.classList.add("paused"),startRaf()});
+audio.addEventListener("pause",()=>{player.classList.remove("playing"),playBtn.classList.remove("paused"),stopRaf()});
 audio.addEventListener("ended",()=>{audio.currentTime=0,updateUI(),player.classList.remove("playing"),playBtn.classList.remove("paused"),stopRaf()});
 playBtn.addEventListener("click",()=>{audio.paused?audio.play():audio.pause()});
-let seeking=!1;function pctFromEvent(e){const t=bar.getBoundingClientRect();let n=(e.touches?e.touches[0].clientX:e.clientX??e.pageX)-t.left;return n=Math.max(0,Math.min(t.width,n)),t.width?n/t.width:0}
-function seekTo(e){const t=safeDur();if(!t)return;const n=pctFromEvent(e);audio.currentTime=n*t,updateUI()}
-bar.addEventListener("pointerdown",e=>{seeking=!0,bar.setPointerCapture(e.pointerId),seekTo(e)});bar.addEventListener("pointermove",e=>{seeking&&seekTo(e)});["pointerup","pointercancel","pointerleave"].forEach(e=>bar.addEventListener(e,()=>{seeking=!1}));
-vol.addEventListener("input",()=>{audio.volume=Number(vol.value)});
-loopBtn.addEventListener("click",()=>{const e=!audio.loop;audio.loop=e,loopBtn.style.boxShadow=e?"0 0 18px var(--neon-side)":"",loopBtn.style.borderColor=e?"var(--neon-side)":"rgba(255,255,255,.25)",loopBtn.setAttribute("aria-pressed",String(e))});
+vol.addEventListener("input",()=>audio.volume=Number(vol.value));
+loopBtn.addEventListener("click",()=>{const e=!audio.loop;audio.loop=e;loopBtn.style.boxShadow=e?"0 0 18px var(--neon-side)":"";loopBtn.style.borderColor=e?"var(--neon-side)":"rgba(255,255,255,.25)"});
+bar.addEventListener("click",e=>{const r=bar.getBoundingClientRect(),x=e.clientX-r.left,p=x/r.width;audio.currentTime=p*safeDur();updateUI()});
 eq.style.animationPlayState="paused";cur.textContent="0:00";dur.textContent="0:00";updateUI();updateDur();
 </script>
 </body>
