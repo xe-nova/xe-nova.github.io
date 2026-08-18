@@ -1,1 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>nova’s digital den</title>
+<style>
+:root{--neon-main:#b94cff;--neon-side:#00ff9d;--glass-bg:rgba(30,0,50,.55)}
+*{box-sizing:border-box}
+html,body{margin:0}
+html{scroll-behavior:smooth}
+body{padding-top:88px;font-family:system-ui,Arial,sans-serif;color:#fff;text-shadow:0 0 15px var(--neon-main);background-image:linear-gradient(115deg,rgba(185,76,255,.25),rgba(0,255,157,.15)),url("back.png");background-position:center;background-size:cover;background-attachment:fixed;background-color:#0a0012;overflow-x:hidden}
+header{position:fixed;inset:0 0 auto 0;background:rgba(25,0,40,.8);display:flex;justify-content:space-between;align-items:center;padding:14px 30px;border-bottom:1px solid rgba(255,255,255,.15);box-shadow:0 2px 20px rgba(0,0,0,.6);backdrop-filter:blur(10px);z-index:10}
+.logo{text-decoration:none;font-weight:800;font-size:1.4rem;color:#fff;text-shadow:0 0 15px var(--neon-main);transition:all .3s ease}
+.logo:hover{color:#e6ccff;text-shadow:0 0 20px var(--neon-side)}
+nav{display:flex;gap:12px}
+.nav-btn{text-decoration:none;color:#fff;padding:8px 16px;border:1px solid rgba(255,255,255,.3);border-radius:8px;background:rgba(255,255,255,.05);transition:all .3s ease}
+.nav-btn:hover{background:var(--neon-main);box-shadow:0 0 20px var(--neon-main);border-color:var(--neon-side)}
 
+.hero{text-align:center;margin:60px auto 40px;max-width:900px;padding:0 20px;opacity:0;animation:fadeIn 1.8s ease forwards}
+.hero h1{font-size:2.2rem;margin:0;text-shadow:0 0 25px var(--neon-main),0 0 15px var(--neon-side);font-weight:800}
+.hero p{font-size:1.1rem;opacity:.9;margin-top:8px;text-shadow:0 0 12px var(--neon-side)}
+@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+
+.content{max-width:1000px;margin:0 auto;padding:0 20px 80px;display:flex;flex-direction:column;gap:40px}
+.box{background:var(--glass-bg);border:1px solid rgba(255,255,255,.2);border-radius:12px;padding:30px;box-shadow:0 0 20px rgba(185,76,255,.25);backdrop-filter:blur(6px);transition:transform .3s ease,box-shadow .3s ease}
+.box:hover{transform:translateY(-5px);box-shadow:0 0 35px var(--neon-main),0 0 15px var(--neon-side)}
+h2{margin:0 0 10px;text-shadow:0 0 15px var(--neon-side),0 0 10px var(--neon-main)}
+
+footer{text-align:center;padding:30px 0 20px;background:rgba(25,0,40,.8);border-top:1px solid rgba(255,255,255,.15);backdrop-filter:blur(8px);box-shadow:0 -2px 20px rgba(0,0,0,.6)}
+
+.banner-link{display:block;position:relative;overflow:hidden;border-radius:14px;text-decoration:none;color:inherit}
+.banner-link::before{content:"";position:absolute;inset:0;background:url("banner.png") center/cover no-repeat;filter:brightness(0.7);transition:filter .3s}
+.banner-link:hover::before{filter:brightness(0.9)}
+.banner-link::after{content:"watch on youtube";position:absolute;bottom:12px;right:20px;font-size:.9rem;color:var(--neon-side);text-shadow:0 0 10px var(--neon-side);opacity:0;transition:opacity .3s}
+.banner-link:hover::after{opacity:.85}
+.banner-overlay{position:relative;padding:60px 20px;text-align:center;z-index:1}
+.banner-overlay h3{margin:0;font-size:1.3rem;text-shadow:0 0 15px var(--neon-main)}
+</style>
+</head>
+<body>
+<header>
+  <a href="/index.html" class="logo">nova’s digital den</a>
+  <nav>
+    <a href="/index.html" class="nav-btn">Home</a>
+    <a href="/projects/projects.html" class="nav-btn">Projects</a>
+    <a href="/modio.html class="nav-btn">Mod.io Page</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>where caffeine meets code.</h1>
+  <p>half logic, half chaos — built at 2 a.m. with too much monster and way too many ideas.</p>
+</section>
+
+<div class="content">
+  <div class="box">
+    <h2>About Me</h2>
+    <p>Hewwwoo im nova and i love developing stuff in my free time some more stuff abt me :3</p>
+    <p>i am a loyal member of the pinegrove pmc in pavlov shack</p>
+    <p>i love vr and most desktop games</p>
+  </div>
+
+  <div class="box">
+    <h2>Projects im working on</h2>
+    <p>none :p</p>
